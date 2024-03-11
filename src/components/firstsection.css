@@ -1,0 +1,187 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    align-items: center;
+    /* z-index: -10;
+    position: fixed */
+    
+}
+.image-con{
+    position: relative;
+    width: 150px;
+    height: 50px;
+}
+.logo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    display: none;
+}
+
+.hamburger{
+    font-size: 20px;
+    color: red;
+    display: block;
+    
+
+}
+
+
+.mobile-nav{
+    background-color: red;
+    height: 100%;
+    /* width: 50px; */
+    position: relative;
+    z-index: 30;
+   
+    
+     
+ }
+ 
+ .mobile-nav-links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+     width: 300px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    position: absolute;
+    padding: 30px ;
+    top:0;
+    right: -300px;
+    background-color: whitesmoke;
+    gap:2rem;
+     height:100vh;
+     transition: all 300ms ease-in;
+ }
+ 
+ .close{
+     position: absolute;
+     top: 10px;
+     right:15px ; 
+     background-color: wheat;
+     border-radius: 50%;
+     height: 30px;
+     width: 30px;
+ }
+ .show{
+    right:0;
+ }
+
+.container{
+    padding: 0 4rem;  
+    min-width: 100%;
+    min-height: 100vh;
+    background-image:url('https://cafeu.vercel.app/_next/static/media/app-bg.f2de9837.png') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+ /* herosection */
+ .hero{
+  
+    display: flex;
+    /* justify-content: space-around; */
+    
+ }
+
+ .image-section{
+    flex:1;
+    /* background-color: red;
+    border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .first-sec{
+    flex:1;
+    /* background-color: red;
+    border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+ }
+
+ .title{
+    font-size: 2rem;
+    padding-bottom: 10px;
+ }
+
+ .intro-text{
+    text-transform: uppercase;
+    /* line-height: 3rem; */
+    font-size: 3.5rem;
+    padding-bottom: 10px;
+ }
+ .hero-image-con{
+    position: relative;
+    width: 800px;
+    height: 700px;
+
+ }
+
+ .hero-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+ }
+
+ .underline{
+    text-decoration: underline;
+    text-transform: capitalize;
+    color:red;
+ }
+.p-down{
+    /* padding-top: -2px; */
+    text-transform: lowercase;
+    color: red;
+}
+
+.dummy{
+    color: rgba(128, 128, 128, 0.874);
+    line-height: 1.5rem;
+}
+
+.play-btn{
+    display: flex;
+    gap:3rem;
+    margin-top: 1.5rem;
+
+}
+
+.play-btn-vid{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #c33;
+    border: 0;
+    color: #fff;
+}
+
+.play-icon{
+    font-size: 1.5rem;
+}
+ /* media queries */
+@media(min-width:768px){
+    .nav-links{
+        display: flex;
+    }
+    .hamburger{
+        display: none;
+    }
+    .mobile-nav{
+        display: none;
+    }
+}
+
+

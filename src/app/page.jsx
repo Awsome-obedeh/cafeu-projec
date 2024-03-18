@@ -3,6 +3,9 @@ import styles from "./page.module.css";
 import HeroComp from "@/components/HeroComp";
 import Card from "@/components/card";
 import Head from "next/head";
+import Banner from "@/components/banner";
+import ThirdSection from "@/components/ThirdSection";
+import Menu from "@/components/Menu";
 
 export default function Home() {
   return (
@@ -39,6 +42,9 @@ export default function Home() {
     />
     </div>
     
+    <Banner/>
+    <ThirdSection/>
+    <Menu/>
     </>
   );
 }

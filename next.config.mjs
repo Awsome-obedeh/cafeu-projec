@@ -9,7 +9,7 @@ const nextConfig = {
         //   },
         // ],
 
-        domains:['cafeu.vercel.app']
+        domains:['cafeu.vercel.app',"static.episodate.com"]
       },
 };
 

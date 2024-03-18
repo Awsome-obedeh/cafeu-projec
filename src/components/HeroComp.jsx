@@ -15,9 +15,9 @@ export default function HeroComp() {
 
         <div className="container">
         <div className='hero'>
-            <div className="first-sec">
+            <div className="first-sec" data-aos="fade-right">
                 <h2 className={`${roboto_mono.className} title`}>Best In Cafeu </h2>
-                <h1 className="intro-text">Different  <span className='underline'>S</span><span className='p-down'>p</span><span className='underline'>ice</span> 
+                <h1 className="intro-text">Different  <span className='underline'>Spice</span> 
                 <br></br>For A different Taste</h1>
                 <p className="dummy">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis officia
@@ -32,7 +32,7 @@ export default function HeroComp() {
                 </div>
             </div>
 
-            <div className="image-section">
+            <div className="image-section " data-aos="fade-left">
                 <div className="hero-image-con">
                     <Image src="https://cafeu.vercel.app/img/slider/baner1.png" fill={true} className='hero-image' /> 
                 </div>

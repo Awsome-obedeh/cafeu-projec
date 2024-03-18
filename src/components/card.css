@@ -1,0 +1,46 @@
+.card{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis:50%;
+    /* align-items: center; */
+    gap:1rem;
+    padding: 5rem 3rem;
+}
+.icon{
+    font-size: 2rem;
+}
+.card-body{
+    /* text-align: center; */
+}
+.card-body img{
+    display: block;
+    margin:auto;
+    margin-bottom: 1rem;
+}
+.title{
+    font-size: 2rem;
+    transition: all 50ms ease;
+    text-align: center;
+}
+
+.title:hover{
+    color: red;
+}
+
+.body{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.discover{
+    text-align: center;
+}
+
+@media(min-width:768px){
+    .card{
+ 
+        flex-direction: column;
+    }
+}

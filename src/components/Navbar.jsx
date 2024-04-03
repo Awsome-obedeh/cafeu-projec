@@ -8,6 +8,7 @@ import { MdPhoneBluetoothSpeaker } from "react-icons/md";
 import { CgMenu } from "react-icons/cg";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import './firstsection.css'
+import ThemeToggle from './ThemeToggle';
 
 
 
@@ -30,6 +31,7 @@ export default function Navbar() {
                     <Image src="https://cafeu.vercel.app/img/logo/logo.png" fill={true} className='logo' />
                 </div>
 
+                <ThemeToggle/>
                 <ul className='nav-links'>
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/">About</Link></li>

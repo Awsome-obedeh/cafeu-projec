@@ -8,9 +8,10 @@ import Footer from "@/components/Footer";
 
 
 import Aos from "@/components/Aos";
+import {ThemeProvider} from "@/components/Context";
 
 
-  
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,14 +21,22 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <html lang="en">
       <body className={`${inter.className} main`}>
-        <Aos/>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+
+
+
+          <Aos />
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
+
+        
+
       </body>
     </html>
   );

@@ -11,7 +11,7 @@ export default function ThemeToggle() {
   
   return (
     <div>
-      <div className="toggle">
+      <div className="toggle hii">
         <CgSun/>
             <div className="ball" onClick={toggleMode} style={theme=="light" ? {left:'2px'}: {right:'2px',background:"white"}}></div>
         <CgMoon/>

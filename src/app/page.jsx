@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import styles from "./page.module.css";
 import HeroComp from "@/components/HeroComp";
@@ -7,7 +8,34 @@ import Banner from "@/components/banner";
 import ThirdSection from "@/components/ThirdSection";
 import Menu from "@/components/Menu";
 
-export default function Home() {
+export default  async function Home() {
+  // making a get request to /api/movie
+  // make a request /api/movies/
+  const getMovies= async ()=>{
+    const res=await fetch("http://localhost:3000/api/movie")
+    // convert api response that is in json to object
+    return await res.json()
+  }
+
+  const data=await getMovies()
+
+  // make a post request
+  const response=await fetch('http://localhost:3000/api/sendMovie',{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json",
+
+    },
+    body:JSON.stringify({name:"obed", sex:"male", phone:"0901838392913"})
+  })
+  console.log(response)
+
+  await response.json()
+  console.log(response)
+
+ 
+
+console.log(data)
   return (
     
 
@@ -48,3 +76,8 @@ export default function Home() {
     </>
   );
 }
+
+import React from 'react'
+
+
+

@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server"
 
 export const POST=async(request)=>{
+   
+
     // destructure the data sent by the front end
     const {firstName,lastName,email,password}=await request.json()
     try{

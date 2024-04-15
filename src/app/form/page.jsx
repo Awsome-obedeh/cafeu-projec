@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import './form.css'
 
-export default function Form() {
+export default  function Form() {
     const [firstName,setFirstName]=useState('')
     const [lastName,setLastName]=useState('')
     const [email,setEmail]=useState('')
@@ -44,6 +44,9 @@ export default function Form() {
         }
 
     }
+
+   
+
 
     return (
         <div className="container">

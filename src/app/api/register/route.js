@@ -1,4 +1,6 @@
+import { connection } from "@/utils/db"
 import { NextResponse } from "next/server"
+// coneectr to DB
 
 export const POST=async(request)=>{
    
@@ -6,7 +8,8 @@ export const POST=async(request)=>{
     // destructure the data sent by the front end
     const {firstName,lastName,email,password}=await request.json()
     try{
-
+        // call our databse connection
+        await connection()
         // validat uer data
         if(!firstName){
             return new NextResponse(JSON.stringify({msg:"provider firstname"}), {status:400})

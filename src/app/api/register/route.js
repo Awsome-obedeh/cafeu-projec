@@ -1,5 +1,8 @@
 import { connection } from "@/utils/db"
 import { NextResponse } from "next/server"
+import bcrypt from "bcryptjs"
+import mongoose from "mongoose"
+import userModel from "@/models/user"
 // coneectr to DB
 
 export const POST=async(request)=>{
@@ -10,7 +13,7 @@ export const POST=async(request)=>{
     try{
         // call our databse connection
         await connection()
-        // validat uer data
+        // validate user data
         if(!firstName){
             return new NextResponse(JSON.stringify({msg:"provider firstname"}), {status:400})
         }
@@ -27,7 +30,20 @@ export const POST=async(request)=>{
         else{
 
             // save in database
-            return new NextResponse(JSON.stringify({msg:"use data accepted successfully"}, {status:206}))
+            // if the table column name (e.g firstName)is the same as the user 
+
+            // hash user password before storing in database
+            const salt= bcrypt.genSaltSync(16);
+            const hashPassword=bcrypt.hashSync(password,salt)
+            // insert user recored in our user collection(table)
+            const user =await new userModel({firstName:firstName, lastName:lastName,email:email,password:hashPassword})
+            await user.save()
+            // if user records are stored successfully 
+            if(user){
+                return new NextResponse(JSON.stringify({msg:"user created successfully"}, {status:201}))
+
+            }
+            
         }
     }
 

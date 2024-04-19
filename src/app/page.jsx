@@ -44,6 +44,7 @@ console.log(data)
     <HeroComp/>
 
 
+
    
     <div className="card-con" data-aos="fade-down">
     <Card

@@ -1,8 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 import './form.css'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+
 
 export default  function Form() {
+    const router=useRouter()
     const [firstName,setFirstName]=useState('')
     const [lastName,setLastName]=useState('')
     const [email,setEmail]=useState('')
@@ -38,9 +42,15 @@ export default  function Form() {
                 body:JSON.stringify(data)
 
             })
-           const datas =await res.json()
-            console.log(datas)
+                await res.json()
+                console.log(res)
+           
             // route to login page
+            if(res.ok){
+                // redirect login page
+                router.replace('/')
+
+            }
         }
 
     }
@@ -73,6 +83,7 @@ export default  function Form() {
                 <button className="btn2">Submit</button>
 
                 firstaname  = {firstName}
+                <Link href="/">Home</Link>
             </form>
         </div>
     )

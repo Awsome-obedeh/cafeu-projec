@@ -18,7 +18,8 @@ const userSchema= new mongoose.Schema({
     email:{
         type:String,
         trim:true,
-        required:true
+        required:true,
+        lowercase:true
     },
    
     password:{
@@ -35,7 +36,7 @@ const userSchema= new mongoose.Schema({
         trim:true,
         required:true,
         default:bvn,
-        unique:true
+        unique:false
     },
 //    timestammps privides the date the user was created and 
 // the date the user record was updated

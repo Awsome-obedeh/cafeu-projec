@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 export default async function Gallery() {
@@ -23,9 +24,10 @@ export default async function Gallery() {
     <div>
       <p>gallery</p>
       
-        <Image src={datas.img1} width={100} height={300}/>
-        <Image src={datas.img2} width={100} height={300}/>
-        <Image src={datas.img1} width={100} height={300}/>
+    <Link href={`/gallery/img1`}><Image src={datas.img1} width={400} height={600}/></Link>  
+    <Link href={`/gallery/img2`}><Image src={datas.img2} width={400} height={600}/></Link>  
+    <Link href={`/gallery/img3`}><Image src={datas.img1} width={400} height={600}/></Link>  
+        
       </div>
 //   
    

@@ -1,11 +1,15 @@
 "use client"
 import React, {useState} from 'react'
 import './login.css'
+import NotFound from './not-found'
+import { notFound, useRouter } from 'next/navigation'
+
 export default function Login() {
 
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const [err,setErr]=useState('')
+    const router=useRouter()
     // a function to handle our login sumbit to the api
     const loginHandler=async (e)=>{
         // preven default submission/refresh the page 
@@ -29,6 +33,15 @@ export default function Login() {
 
 
                 })
+                console.log(res)
+                if(res.ok){
+                    // route to dash oard
+                    router.push('/dashboard')
+                }
+
+                else{
+                    return notFound()
+                }
         }
     }
   return (

@@ -1,4 +1,4 @@
-import { connection } from "@/utils/db"
+import { connectDb } from "@/utils/db"
 import { NextResponse } from "next/server"
 import bcrypt from "bcryptjs"
 import mongoose from "mongoose"
@@ -12,7 +12,7 @@ export const POST=async(request)=>{
     const {firstName,lastName,email,password}=await request.json()
     try{
         // call our databse connection
-        await connection()
+        await connectDb()
         // validate user data
         if(!firstName){
             return new NextResponse(JSON.stringify({msg:"provider firstname"}), {status:400})
